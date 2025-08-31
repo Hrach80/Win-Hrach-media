@@ -1,4 +1,3 @@
-
 :root {
     --main-bg-color: #212529;
     --light-shadow: #3b3e42;
@@ -37,7 +36,7 @@
     font-family: 'Times New Roman', serif;
     font-size: 14px;
     font-weight: bold;
-    color:orangered;
+    color: orangered;
 }
 
 .window-controls {
@@ -46,7 +45,7 @@
 }
 
 .win-control {
- padding: 3px 25px;
+    padding: 3px 25px;
     background-color: #2e3236;
     border: none;
     cursor: pointer;
@@ -122,7 +121,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-color:var(--display-green);
+    color: var(--display-green);
     overflow: hidden;
     white-space: nowrap;
     padding: 5px;
@@ -232,7 +231,6 @@ color:var(--display-green);
     color: var(--display-green);
 }
 
-/* Ներքևի վահանակ */
 .bottom-panel {
     display: flex;
     justify-content: space-between;
@@ -293,7 +291,7 @@ color:var(--display-green);
     border-radius: 4px;
     background-color: var(--main-bg-color);
     box-shadow: 4px 4px 8px var(--dark-shadow), -4px -4px 8px var(--light-shadow);
-    color:orangered;
+    color: orangered;
     border: none;
     cursor: pointer;
     text-transform: uppercase;
@@ -311,4 +309,185 @@ color:var(--display-green);
     width: 15px;
     height: 20px;
     fill: var(--purple);
+}
+
+/* Responsive Media Queries */
+
+/* Ավելի լայն էկրանների համար (մինչև 1024px) */
+@media (max-width: 1024px) {
+    .winamp-container {
+        width: 450px;
+        padding: 8px 12px;
+    }
+}
+
+/* Պլանշետների համար (մինչև 768px) */
+@media (max-width: 768px) {
+    .winamp-container {
+        width: 400px;
+        padding: 8px 10px;
+    }
+
+    .display-box {
+        font-size: 20px;
+        width: 120px;
+    }
+
+    .song-info {
+        width: 120px;
+    }
+
+    .volume-slider-container {
+        width: 120px;
+    }
+}
+
+/* Մոբայլ սարքեր (մինչև 425px) */
+@media (max-width: 425px) {
+    .winamp-container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .top-panel,
+    .middle-panel,
+    .bottom-panel {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .display-box {
+        width: 100%;
+        font-size: 18px;
+        justify-content: center;
+        padding: 8px;
+    }
+
+    .visualizer-box {
+        width: 100%;
+        height: 30px;
+    }
+
+    .song-info {
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .progress-bar-container {
+        width: 100%;
+    }
+
+    .volume-slider-container {
+        width: 100%;
+    }
+
+    .mode-indicators {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .playback-controls {
+        width: 100%;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    .eject-controls {
+        width: 100%;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    .nav-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-button svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .eq-button,
+    .pl-button {
+        min-width: 50px;
+        height: 35px;
+        font-size: 9px;
+    }
+}
+
+/* Մոբայլ սարքեր (մինչև 375px) */
+@media (max-width: 375px) {
+    .winamp-container {
+        padding: 8px;
+    }
+
+    .display-box {
+        font-size: 16px;
+    }
+
+    .visualizer-box {
+        height: 25px;
+    }
+
+    .song-info {
+        font-size: 12px;
+    }
+
+    .nav-button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nav-button svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .eq-button,
+    .pl-button {
+        min-width: 45px;
+        height: 30px;
+        font-size: 8px;
+    }
+}
+
+/* Մոբայլ սարքեր (մինչև 320px) */
+@media (max-width: 320px) {
+    .winamp-container {
+        padding: 5px;
+    }
+
+    .display-box {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .visualizer-box {
+        height: 20px;
+    }
+
+    .song-info {
+        font-size: 10px;
+    }
+
+    .nav-button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-button svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .eq-button,
+    .pl-button {
+        min-width: 40px;
+        height: 28px;
+        font-size: 7px;
+    }
 }

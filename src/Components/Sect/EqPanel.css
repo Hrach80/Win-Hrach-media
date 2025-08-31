@@ -106,3 +106,127 @@
     margin-top: 10px;
     color: #888;
 }
+
+/* Responsive Media Queries */
+
+/* For smaller laptops and tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .eq-panel-container {
+        width: 450px;
+        padding: 12px;
+    }
+}
+
+/* For tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .eq-panel-container {
+        width: 350px;
+        padding: 10px;
+    }
+
+    .eq-sliders {
+        height: 120px;
+        gap: 8px;
+    }
+
+    .eq-slider {
+        height: 80px;
+    }
+
+    .eq-presets select {
+        font-size: 12px;
+    }
+}
+
+/* For mobile devices (max-width: 425px) */
+@media (max-width: 425px) {
+    .eq-panel-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .eq-sliders {
+        height: 100px;
+        gap: 6px;
+    }
+
+    .eq-slider {
+        height: 70px;
+        width: 8px;
+    }
+
+    .eq-slider::-webkit-slider-thumb {
+        width: 16px;
+        height: 8px;
+    }
+
+    .eq-freq {
+        font-size: 9px;
+    }
+
+    .eq-panel-header {
+        font-size: 14px;
+    }
+}
+
+/* For mobile devices (max-width: 375px) */
+@media (max-width: 375px) {
+    .eq-panel-container {
+        width: 95%;
+        padding: 8px;
+    }
+
+    .eq-sliders {
+        height: 90px;
+        gap: 5px;
+    }
+
+    .eq-slider {
+        height: 60px;
+        width: 7px;
+    }
+
+    .eq-slider::-webkit-slider-thumb {
+        width: 14px;
+        height: 7px;
+    }
+
+    .eq-freq {
+        font-size: 8px;
+    }
+
+    .eq-panel-header {
+        font-size: 12px;
+    }
+}
+
+/* For mobile devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .eq-panel-container {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .eq-sliders {
+        height: 80px;
+        gap: 4px;
+    }
+
+    .eq-slider {
+        height: 50px;
+        width: 6px;
+    }
+
+    .eq-slider::-webkit-slider-thumb {
+        width: 12px;
+        height: 6px;
+    }
+
+    .eq-freq {
+        font-size: 7px;
+    }
+
+    .eq-panel-header {
+        font-size: 11px;
+    }
+}
