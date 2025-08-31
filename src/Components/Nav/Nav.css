@@ -350,17 +350,30 @@
         padding: 10px;
     }
 
+    .window-controls {
+        display: none;
+    }
+
+    .header-panel {
+        justify-content: center;
+    }
+
+    .logo-text {
+        font-size: 16px;
+    }
+
     .top-panel,
     .middle-panel,
     .bottom-panel {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 
     .display-box {
         width: 100%;
         font-size: 18px;
+        height: 50px;
         justify-content: center;
         padding: 8px;
     }
@@ -412,7 +425,9 @@
     }
 
     .eq-button,
-    .pl-button {
+    .pl-button,
+    .shuffle-button,
+    .repeat-button {
         min-width: 50px;
         height: 35px;
         font-size: 9px;
@@ -423,6 +438,10 @@
 @media (max-width: 375px) {
     .winamp-container {
         padding: 8px;
+    }
+
+    .logo-text {
+        font-size: 14px;
     }
 
     .display-box {
@@ -448,7 +467,9 @@
     }
 
     .eq-button,
-    .pl-button {
+    .pl-button,
+    .shuffle-button,
+    .repeat-button {
         min-width: 45px;
         height: 30px;
         font-size: 8px;
@@ -459,6 +480,10 @@
 @media (max-width: 320px) {
     .winamp-container {
         padding: 5px;
+    }
+
+    .logo-text {
+        font-size: 12px;
     }
 
     .display-box {
@@ -485,7 +510,9 @@
     }
 
     .eq-button,
-    .pl-button {
+    .pl-button,
+    .shuffle-button,
+    .repeat-button {
         min-width: 40px;
         height: 28px;
         font-size: 7px;

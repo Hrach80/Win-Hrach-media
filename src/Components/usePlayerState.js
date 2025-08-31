@@ -56,12 +56,14 @@ export const usePlayerState = () => {
 
         setupEqFilters();
     }, [setupEqFilters]);
+
     const handleNext = useCallback(() => {
         if (state.songsList.length > 0) {
             const nextIndex = (state.currentSongIndex + 1) % state.songsList.length;
             setState(prev => ({ ...prev, currentSongIndex: nextIndex }));
         }
     }, [state.songsList, state.currentSongIndex]);
+
     useEffect(() => {
         const audio = audioRef.current;
         if (!audio || !analyserRef.current) return;
@@ -113,7 +115,7 @@ export const usePlayerState = () => {
 
             return () => URL.revokeObjectURL(songUrl);
         }
-    }, [state.currentSongIndex, state.songsList, state.volume, setupAudioApi]);
+    }, [state.currentSongIndex, state.songsList, setupAudioApi]); // removed state.volume from dependency array
 
     const handleFilesChange = (e) => {
         const files = Array.from(e.target.files).filter(file => file.name.toLowerCase().endsWith('.mp3'));
@@ -143,13 +145,16 @@ export const usePlayerState = () => {
     };
 
     const handleSelectSong = useCallback((index) => setState(prev => ({ ...prev, currentSongIndex: index })), []);
+
     const togglePlayPause = () => {
         if (state.songsList.length === 0) return;
         const audio = audioRef.current;
         if (state.isPlaying) {
             audio.pause();
         } else {
-            audioContextRef.current.resume();
+            if (audioContextRef.current) {
+                audioContextRef.current.resume();
+            }
             audio.play().catch(e => console.error("Play failed:", e));
         }
         setState(prev => ({ ...prev, isPlaying: !prev.isPlaying }));
